@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ProductCentral</string>
+    <string name="product_sku">Product SKU</string>
+    <string name="product_name">Product Title</string>
+    <string name="ean">EAN</string>
+</resources>

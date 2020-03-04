@@ -1,6 +1,7 @@
 package com.digidevcloud.productcentral.productcentral;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -101,7 +102,7 @@ public class ProductlistActivity extends AppCompatActivity {
 
                 List<ProductModel> productModelList = new ArrayList<ProductModel>();
 
-                for(int i=0; i < 6; i++){
+                for(int i=0; i < 10; i++){
 
                     JSONObject finalObject = parentArray.getJSONObject(i);
                     JSONObject paramsObject =  new JSONObject(finalObject.getString("product_dims"));
@@ -223,9 +224,9 @@ public class ProductlistActivity extends AppCompatActivity {
 
                 @Override
                 public void onClick(View v) {
-                    //Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                    //intent.putExtra("productID",productModelList.get(position).getDdc_vendor_product_id());
-                    //startActivity(intent);
+                    Intent intent = new Intent(getApplicationContext(), ProductdetailActivity.class);
+                    intent.putExtra("textID","Goodbye");
+                    startActivity(intent);
                 }
             });
 
